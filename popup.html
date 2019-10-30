@@ -2,21 +2,21 @@
 <html>
     <head>
         <title>Memorise window</title>
+        <link rel="stylesheet" href="popup.css">
     </head>
     <style type = "text/css">
-    body{
-            margin: 5px;
-        }
-    h1 {
-            font-size: 15px;
-            text-align: centre;
-        }
+    
     </style>
     <body>
-        <h1>Memorise Your current window session:</h1>
-        <button id = "memorise_button" type="button">Memorise Tabs</button>
-        <input type="text" name="sessionName" id="sessionName" >
-        <input type="text" name="existingName" id="existingName" >
+        <h1>Memorise your current window session:</h1><br>
+        <label for="Session Name" id="tex"><b>To save your current tabs:</b></label>
+        <input type="text" name="sessionName" id="sessionName" placeholder="Enter name"><br><br>
+        
+        <button id = "memorise_button" type="button">Memorise Tabs</button><br><br>
+        <p id="tex"><b>Select session name to open:</b></p>
+        <div class = 'select-style'>
+            <select id = "listOfKeys"></select>
+        </div>
         <button id = "retrieve_button" type="button" > Retrieve Session</button>
 
     </body>

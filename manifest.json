@@ -3,7 +3,7 @@
   
   "name": "Memorise Window Session",
   "description":"My first Extension",
-  "version":"1.0",
+  "version":"2.0",
   "author":"Saransh Jain",
   "browser_action":{
     "default_icon":"icon.png",
