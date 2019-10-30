@@ -1,12 +1,13 @@
+ 
 {
   "manifest_version": 2,
   
-  "name": "Memorise Window Session",
-  "description":"My first Extension",
+  "name": "Savidow",
+  "description":"Extension for",
   "version":"1.0",
-  "author":"Saransh Jain",
+  "author":["Shubham Pandey","Saransh Jain"],
   "browser_action":{
-    "default_icon":"icon.png",
+    "default_icon":"images/icon.png",
     "default_popup":"popup.html",
     "defeault_title":"Memorise current Window"
   

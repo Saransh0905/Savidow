@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Memorise window</title>
-    </head>
-    <style type = "text/css">
-    body{
-            margin: 5px;
-        }
-    h1 {
-            font-size: 15px;
-            text-align: centre;
-        }
-    </style>
-    <body>
-        <h1>Memorise Your current window session:</h1>
-        <button id = "memorise_button" type="button">Memorise Tabs</button>
-        <input type="text" name="sessionName" id="sessionName" >
-        <input type="text" name="existingName" id="existingName" >
-        <button id = "retrieve_button" type="button" > Retrieve Session</button>
+  <head>
+    <style>
+    
+      button {
+        height: 20px;
+        width: 200px;
+        padding: 5px;
 
-    </body>
-    <script src = "popup.js"></script>
+      }
+      
+      a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="addEvent"><a href="save.html">Save Session</a></button>
+    <button id="openEvent"><a href="options.html">Open Session</a></button>
+    <script src="popup.js"></script>
+  </body>
 </html>
