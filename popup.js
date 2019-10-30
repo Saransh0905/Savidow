@@ -1,21 +1,29 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
 
-'use strict';
+document.addEventListener('DOMContentLoaded',function(){
+    
+    var MemoriseButton = document.getElementById('memorise_button');
+    var RetrieveButton = document.getElementById('retrieve_button');
+    
+    MemoriseButton.addEventListener('click',function(){
+        var sessionName = document.getElementById('sessionName').value;
+        alert("You have saved all tabs");
+        var urlArray = [];
+        chrome.tabs.getAllInWindow(null,function(tabs)
+        {
+        tabs.forEach(element => 
+            {
+            urlArray.push(element.url)
+        })
+        alert(urlArray);
+        localStorage.setItem(sessionName,urlArray);
+        console.log(localStorage.getItem("hello"));
 
-let changeColor = document.getElementById('changeColor');
 
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
-});
-
-changeColor.onclick = function(element) {
-  let color = element.target.value;
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(
-        tabs[0].id,
-        {code: 'document.body.style.backgroundColor = "' + color + '";'});
-  });
-};
+    }); 
+    },false);
+    
+    RetrieveButton.addEventListener('click',function(){
+        var existingName = document.getElementById('existingName').value;
+        console.log(localStorage.getItem(existingName));
+    },false);
+},false);
